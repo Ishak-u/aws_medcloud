@@ -1,0 +1,133 @@
+/* Basic Reset & Font */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A common sans-serif font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Login Container Styling */
+.login-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+/* Title Styling */
+.login-container h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box; /* Ensure padding doesn't add to width */
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: rgb(17, 209, 17); /* Highlight border on focus */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(17, 209, 17, 0.3); /* Soft glow on focus */
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: rgb(17, 209, 17); /* Green button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(17, 209, 17, 0.4);
+}
+
+button:hover {
+    background-color: rgb(15, 180, 15); /* Slightly darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+button:active {
+    transform: translateY(0); /* Return to original position on click */
+    box-shadow: 0 2px 5px rgba(17, 209, 17, 0.4);
+}
+
+/* Message Box Styling */
+#messageBox {
+    margin-top: 20px;
+    font-size: 0.95em;
+    min-height: 1.5em; /* Reserve space to prevent layout shift */
+}
+
+.message-success {
+    color: rgb(17, 209, 17); /* Green for success */
+}
+
+.message-error {
+    color: #d9534f; /* Red for error */
+}
+
+/* Signup Link Styling */
+.signup-link {
+    margin-top: 25px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.signup-link a {
+    color: rgb(17, 209, 17); /* Green link */
+    text-decoration: none;
+    font-weight: bold;
+    transition: text-decoration 0.3s ease;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .login-container {
+        margin: 20px; /* Add some margin on smaller screens */
+        padding: 30px;
+    }
+    .login-container h2 {
+        font-size: 1.8em;
+    }
+    button {
+        font-size: 1em;
+        padding: 12px;
+    }
+}
